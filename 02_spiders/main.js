@@ -48,7 +48,7 @@ function clickSpider(id) {
     }
 
     if (cursorQueue.length == 69) {
-        score.innerText == 'Nice';
+        score.innerText = 'Nice';
     } else {
         score.innerText = 'Score: ' + cursorQueue.length;
     }

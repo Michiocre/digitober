@@ -1,5 +1,6 @@
 let heading = document.getElementById('spider');
 let body = document.getElementsByTagName('body')[0];
+let score = document.getElementsByTagName('h2')[0];
 
 let freeSpiders = new Map();
 let cursorQueue = [];
@@ -45,8 +46,12 @@ function clickSpider(id) {
     if (freeSpiders.delete(id)) {
         cursorQueue.push(spooder);
     }
-    let score = document.getElementsByTagName('h2')[0];
-    score.innerText = 'Score: ' + cursorQueue.length;
+
+    if (cursorQueue.length == 69) {
+        score.innerText == 'Nice';
+    } else {
+        score.innerText = 'Score: ' + cursorQueue.length;
+    }
 }
 
 

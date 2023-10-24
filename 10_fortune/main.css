@@ -1,0 +1,279 @@
+html {
+    height: 100%;
+    user-select: none;
+}
+body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    background-image: url('assets/table.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    backdrop-filter: brightness(0.4);
+    color: white
+}
+
+h1 {
+    transition: opacity 0.8s;
+}
+
+.gone {
+    opacity: 0%;
+}
+
+#intro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    background-color: black;
+    text-align: center;
+    padding-top: 150px;
+    transition: hidden 0.8s;
+}
+
+.card-wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transition-property: top, left, transform;
+    transition-duration: 0.8s;
+    transform-origin: left top;
+}
+
+.to-deck {
+    top: 95%;
+    left: 40px;
+    transform: scale(0);
+}
+
+.underneath {
+    width: 0px;
+    height: 275px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: box-shadow 0.8s;
+}
+
+.card {
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    transform: translate(-50%, -50%);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-text {
+    position: absolute;
+    opacity: 0%;
+    transition: transform 0.8s;
+    margin: 0;
+    height: 100%;
+    width: 25vw;
+    margin-top: -1em;
+}
+
+.text-active {
+    opacity: 100%;
+    transform: translateX(240px);
+}
+
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/0_backside.png');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.flipped {
+    transform: translate(-50%, -50%) rotateY(180deg) scale(1.6);
+}
+
+.glow-normal {
+    -webkit-box-shadow:0 0 200px green; 
+    -moz-box-shadow: 0 0 200px green; 
+    box-shadow:0 0 200px 150px rgba(0, 255, 0, 0.5);
+}
+
+.glow-rare {
+    -webkit-box-shadow:0 0 200px purple; 
+    -moz-box-shadow: 0 0 200px purple; 
+    box-shadow:0 0 200px 150px rgba(128, 0, 128, 0.5);
+}
+
+.glow-special {
+    -webkit-box-shadow:0 0 200px orangered; 
+    -moz-box-shadow: 0 0 200px orangered; 
+    box-shadow:0 0 200px 150px rgba(255, 69, 0, 0.5);
+}
+
+h2 {
+    color: rgba(120,120,120,1);
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+}
+
+#deck-row {
+    display: flex;
+    margin: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#deck-icon {
+    width: 80px;
+    height: 120px;
+    background-image: url('assets/0_backside.png');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    margin-right: 20px;
+}
+
+.deck-text {
+    opacity: 0%;
+}
+
+.hidden {
+    display: none !important;
+    transition: transform 0.8s;
+}
+
+#deck {
+    display: flex;
+}
+
+.small-card {
+    height: 100%;
+    width: 100%;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.small-card-wrapper {
+    margin-left: -20px;
+    width: 80px;
+    height: 120px;
+}
+
+.small-card-wrapper:hover > .small-card {
+    transform: scale(3) translateY(-100%);
+}
+
+.small-card-wrapper:hover .deck-text {
+    opacity: 100%;
+    transform: translateX(100%);
+}
+
+footer {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    background: rgba(0,0,0,0.5);
+}
+
+a {
+    color: orangered;
+}
+
+span {
+    cursor: pointer;
+}
+
+.letterActive {
+    color: orangered;
+}
+
+.c1 {
+    background-image: url('assets/1_magician.png')
+}
+.c2 {
+    background-image: url('assets/2_high_priestess.png')
+}
+.c3 {
+    background-image: url('assets/3_empress.png')
+}
+.c4 {
+    background-image: url('assets/4_emperor.png')
+}
+.c5 {
+    background-image: url('assets/5_hierophant.png')
+}
+.c6 {
+    background-image: url('assets/6_lovers.png')
+}
+.c7 {
+    background-image: url('assets/7_chariot.png')
+}
+.c8 {
+    background-image: url('assets/8_strength.png')
+}
+.c9 {
+    background-image: url('assets/9_hermit.png')
+}
+.c10 {
+    background-image: url('assets/10_wheel.png')
+}
+.c11 {
+    background-image: url('assets/11_justice.png')
+}
+.c12 {
+    background-image: url('assets/12_hanged_man.png')
+}
+.c13 {
+    background-image: url('assets/13_death.png')
+}
+.c14 {
+    background-image: url('assets/14_temperance.png')
+}
+.c15 {
+    background-image: url('assets/15_devil.png')
+}
+.c16 {
+    background-image: url('assets/16_tower.png')
+}
+.c17 {
+    background-image: url('assets/17_star.png')
+}
+.c18 {
+    background-image: url('assets/18_moon.png')
+}
+.c19 {
+    background-image: url('assets/19_sun.png')
+}
+.c20 {
+    background-image: url('assets/20_judgement.png')
+}
+.c21 {
+    background-image: url('assets/21_world.png')
+}
+.c22 {
+    background-image: url('assets/22_fool.png')
+}
